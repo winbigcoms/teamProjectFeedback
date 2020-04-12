@@ -19,11 +19,20 @@ for( i=0; i < openMenuDetailBtn.length; i++){
     // hover시 이미지 사이즈 변화 이벤트
     openMenuDetailBtn[i].addEventListener("mouseover",function(e){
         MenuImg = e.currentTarget.previousElementSibling.querySelector("img")
-        MenuImg.style.transform = "scale(1.2)";
+       if(MenuImg.classList.contains("brownie")){
+           MenuImg.style.transform = "scale(0.9)";
+       }else{
+           MenuImg.style.transform = "scale(1.1)";
+       }
     });
+
     openMenuDetailBtn[i].addEventListener("mouseout",function(e){
         MenuImg = e.currentTarget.previousElementSibling.querySelector("img")
-        MenuImg.style.transform = "scale(1)";
+        if(MenuImg.classList.contains("brownie")){
+            MenuImg.style.transform = "scale(0.8)";
+        }else{
+            MenuImg.style.transform = "scale(1.0)";
+        }
     });
 
     // 클릭시 메뉴디테일 나오는 이벤트

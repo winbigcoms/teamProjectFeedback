@@ -1,3 +1,4 @@
+ @charset "utf-8";
  /*  css 컴포넌트 */
 
 a{
@@ -178,21 +179,23 @@ th{
 }
 /* 메인 영역 */
 .appMain{
-    margin:30px auto 0;
+    margin:60px auto 30px;
     width:90%;
     max-width: 1000px;
 }
+/* 메인 메뉴 박스 */
 .appMain ul{
     display:flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
+/* 메뉴 아이템 박스 */
 .menuItem{
     width: 49%;
-    min-width: 330px;
     background: #F5F5F5;
     border: 1px solid #F5F5F5;
     position: relative;
+    margin-top:30px;
 }
 .menuItem figure{
     text-align: center;
@@ -201,13 +204,17 @@ th{
 }
 .menuItem figure img{
     transition: all 0.7s;
-    height: 300px;
-    width:auto;
+    height: auto;
+    width: 50%;
+    max-width:280px;
 }
-
-#menuName{
-    padding: 20px 0;
+img[src*="브라우니"]{
+    transform: scale(0.8);
 }
+.menuItem figure figcaption{
+    margin: 20px 0;
+}
+/* 메뉴 상세보기 버튼 */
 .openMenuDetail{
     position: absolute;
     top:0;
@@ -219,6 +226,7 @@ th{
     white-space: nowrap;
     overflow: hidden;
 }
+/* 메뉴 상세정보 */
 .menuDetail{
     position: absolute;
     top:0;
@@ -284,4 +292,29 @@ th{
     background-color: #000;
     width: 30px;
     height: 2px;
+}
+@media(max-width:660px){
+    .appHeaderHeading a img{
+        height: 30%;
+        width:auto;
+        padding-top:30px
+    }
+    .appMain ul{
+        margin-top:100px;
+    }
+    .menuItem{
+        width: 90%;
+        margin: 5px auto;
+    }
+    .elementTable tr th, .elementTable tr td{
+        font-size: 1em;
+    }
+    .menuItem figure figcaption{
+        margin: 10px 0;
+    }
+}
+@media(max-width:415px){
+    .elementTable tr th, .elementTable tr td{
+        font-size: 0.7em;
+    }
 }
