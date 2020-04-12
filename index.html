@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ediya homepage</title>
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <script src="./script/index.js" defer></script>
+</head>
+<body>
+    <header class="appHeader">
+        <h1 class="resetMargin appHeaderHeading">
+            <a href="#" target="_blank" aria-label="이디야 커피 홈페이지">
+                <img src="./style/images/Logo.svg" alt="이디야 커피">
+            </a>
+        </h1>
+        <button class="resetBtn naviOpenBtn" type="button" aria-labelledby="mainNav" aria-pressed="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="appNav">
+            <h2 class="a11yHidden" id="mainNav">이디야 홈 페이지 메인 네비게이션</h2>
+            <ul>
+                <li class="appNaviMenu">
+                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false">이디야 음료들</button>
+                    <ul class="navSubmenu">
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                    </ul>
+                </li>
+                <li class="appNaviMenu">
+                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false">이디야 멤버스</button>
+                    <ul class="navSubmenu">
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                    </ul>
+                </li>
+                <li class="appNaviMenu">
+                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false">이디야 커피랩</button>
+                    <ul class="navSubmenu">
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                    </ul>
+                </li>
+                <li class="appNaviMenu">
+                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false">이디야 컬쳐랩</button>
+                    <ul class="navSubmenu">
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                    </ul>
+                </li>
+                <li class="appNaviMenu">
+                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false">이디야 공지사항</button>
+                    <ul class="navSubmenu">
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                    </ul>
+                </li>
+                <li class="appNaviMenu">
+                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false">이디야 매장찾기</button>
+                    <ul class="navSubmenu">
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="resetBtn naviCloseBtn" aria-label="메인 네비게이션 닫기">
+                <span class="cross1"></span>
+                <span class="cross2"></span>
+            </button>
+        </nav>
+    </header>
+    <main class="appMain">
+        <h2 class="a11yHidden">이디야 커피 메뉴들</h2>
+        <ul class="menuList">
+            <li class="menuItem" aria-labelledby="iceCBL">
+                <figure class="resetMargin">
+                    <img src="./style/images/iced벚꽃라떼.svg">
+                    <figcaption id="iceCBL">ICED 벚꽃라떼</figcaption>
+                </figure>
+                <button class="resetBtn openMenuDetail" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
+                <article class="menuDetail" role="dialog">
+                    <h3 class="a11yHidden" id="ICECherryBlossomLatteDetail">메뉴 상세정보</h3>
+                    <dl>
+                        <dt class="resetMargin">ICED 벚꽃라떼
+                            <span lang="en">Cherry Blossom Latte</span>
+                        </dt>
+                        <dd class="resetMargin">
+                            은은한 벚꽃향과 라즈베리 화이트 초콜릿 토핑이 올라간 핑크빛 라떼
+                        </dd>
+                    </dl>
+                    <div class="dividTable">
+                        <table class="elementTable" aria-labelledby="ICECherryBlossomLatteDetail">
+                            <tr>
+                                <th scope="row">칼로리</th>
+                                <td>(393kcal)</td>
+                                <th scope="row">포화지방</th>
+                                <td>(18.6g)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">당류</th>
+                                <td>(35g)</td>
+                                <th scope="row">나트륨</th>
+                                <td>(149mg)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">단백질</th>
+                                <td>(7g)</td>
+                                <th scope="row">카페인</th>
+                                <td>(0mg)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="resetBtn menuDetailCloseBtn" type="button" aria-label="상세정보닫기">
+                        <span class="cross1"></span>
+                        <span class="cross2"></span>
+                    </button>
+                </article>
+            </li>
+            <li class="menuItem" aria-labelledby="HOTCBL">
+                <figure class="resetMargin">
+                    <img src="./style/images/hot벚꽃라떼.svg">
+                    <figcaption id="HOTCBL">HOT 벚꽃라떼</figcaption>
+                </figure>
+                <button class="resetBtn openMenuDetail" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
+                <article class="menuDetail" role="dialog">
+                    <h3 class="a11yHidden" id="HOTCherryBlossomLatteDetail">메뉴 상세정보</h3>
+                    <dl aria-labelledby="HOTCherryBlossomLatteDetail">
+                        <dt class="resetMargin">ICED 벚꽃라떼
+                            <span lang="en">Cherry Blossom Latte</span>
+                        </dt>
+                        <dd class="resetMargin">
+                            은은한 벚꽃향과 라즈베리 화이트 초콜릿 토핑이 올라간 핑크빛 라떼
+                        </dd>
+                    </dl>
+                    <div class="dividTable">
+                        <table class="elementTable" aria-labelledby="HOTCherryBlossomLatteDetail">
+                            <tr>
+                                <th scope="row">칼로리</th>
+                                <td>(430kcal)</td>
+                                <th scope="row">포화지방</th>
+                                <td>(19.0g)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">당류</th>
+                                <td>(38g)</td>
+                                <th scope="row">나트륨</th>
+                                <td>(190mg)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">단백질</th>
+                                <td>(10g)</td>
+                                <th scope="row">카페인</th>
+                                <td>(0mg)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="resetBtn menuDetailCloseBtn" type="button" aria-label="상세정보닫기">
+                        <span class="cross1"></span>
+                        <span class="cross2"></span>
+                    </button>
+                </article>
+            </li>
+            <li class="menuItem" aria-labelledby="menuName">
+                <figure class="resetMargin">
+                    <img src="./style/images/iced벚꽃라떼.svg">
+                    <figcaption id="menuName">ICED 벚꽃라떼</figcaption>
+                </figure>
+                <button class="resetBtn openMenuDetail" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
+                <article class="menuDetail" role="dialog">
+                    <h3 class="a11yHidden" id="ICECherryBlossomLatteDetail">메뉴 상세정보</h3>
+                    <dl>
+                        <dt class="resetMargin">ICED 벚꽃라떼
+                            <span lang="en">Cherry Blossom Latte</span>
+                        </dt>
+                        <dd class="resetMargin">
+                            은은한 벚꽃향과 라즈베리 화이트 초콜릿 토핑이 올라간 핑크빛 라떼
+                        </dd>
+                    </dl>
+                    <div class="dividTable">
+                        <table class="elementTable" aria-labelledby="ICECherryBlossomLatteDetail">
+                            <tr>
+                                <th scope="row">칼로리</th>
+                                <td>(393kcal)</td>
+                                <th scope="row">포화지방</th>
+                                <td>(18.6g)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">당류</th>
+                                <td>(35g)</td>
+                                <th scope="row">나트륨</th>
+                                <td>(149mg)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">단백질</th>
+                                <td>(7g)</td>
+                                <th scope="row">카페인</th>
+                                <td>(0mg)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="resetBtn menuDetailCloseBtn" type="button" aria-label="상세정보닫기">
+                        <span class="cross1"></span>
+                        <span class="cross2"></span>
+                    </button>
+                </article>
+            </li>
+            <li class="menuItem" aria-labelledby="menuName">
+                <figure class="resetMargin">
+                    <img src="./style/images/hot벚꽃라떼.svg">
+                    <figcaption id="menuName">HOT 벚꽃라떼</figcaption>
+                </figure>
+                <button class="resetBtn openMenuDetail" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
+                <article class="menuDetail" role="dialog">
+                    <h3 class="a11yHidden" id="HOTCherryBlossomLatteDetail">메뉴 상세정보</h3>
+                    <dl aria-labelledby="HOTCherryBlossomLatteDetail">
+                        <dt class="resetMargin">ICED 벚꽃라떼
+                            <span lang="en">Cherry Blossom Latte</span>
+                        </dt>
+                        <dd class="resetMargin">
+                            은은한 벚꽃향과 라즈베리 화이트 초콜릿 토핑이 올라간 핑크빛 라떼
+                        </dd>
+                    </dl>
+                    <div class="dividTable">
+                        <table class="elementTable" aria-labelledby="HOTCherryBlossomLatteDetail">
+                            <tr>
+                                <th scope="row">칼로리</th>
+                                <td>(430kcal)</td>
+                                <th scope="row">포화지방</th>
+                                <td>(19.0g)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">당류</th>
+                                <td>(38g)</td>
+                                <th scope="row">나트륨</th>
+                                <td>(190mg)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">단백질</th>
+                                <td>(10g)</td>
+                                <th scope="row">카페인</th>
+                                <td>(0mg)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="resetBtn menuDetailCloseBtn" type="button" aria-label="상세정보닫기">
+                        <span class="cross1"></span>
+                        <span class="cross2"></span>
+                    </button>
+                </article>
+            </li>
+            <li class="menuItem" aria-labelledby="menuName">
+                <figure class="resetMargin">
+                    <img src="./style/images/iced벚꽃라떼.svg">
+                    <figcaption id="menuName">ICED 벚꽃라떼</figcaption>
+                </figure>
+                <button class="resetBtn openMenuDetail" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
+                <article class="menuDetail" role="dialog">
+                    <h3 class="a11yHidden" id="ICECherryBlossomLatteDetail">메뉴 상세정보</h3>
+                    <dl>
+                        <dt class="resetMargin">ICED 벚꽃라떼
+                            <span lang="en">Cherry Blossom Latte</span>
+                        </dt>
+                        <dd class="resetMargin">
+                            은은한 벚꽃향과 라즈베리 화이트 초콜릿 토핑이 올라간 핑크빛 라떼
+                        </dd>
+                    </dl>
+                    <div class="dividTable">
+                        <table class="elementTable" aria-labelledby="ICECherryBlossomLatteDetail">
+                            <tr>
+                                <th scope="row">칼로리</th>
+                                <td>(393kcal)</td>
+                                <th scope="row">포화지방</th>
+                                <td>(18.6g)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">당류</th>
+                                <td>(35g)</td>
+                                <th scope="row">나트륨</th>
+                                <td>(149mg)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">단백질</th>
+                                <td>(7g)</td>
+                                <th scope="row">카페인</th>
+                                <td>(0mg)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="resetBtn menuDetailCloseBtn" type="button" aria-label="상세정보닫기">
+                        <span class="cross1"></span>
+                        <span class="cross2"></span>
+                    </button>
+                </article>
+            </li>
+            <li class="menuItem" aria-labelledby="menuName">
+                <figure class="resetMargin">
+                    <img src="./style/images/hot벚꽃라떼.svg">
+                    <figcaption id="menuName">HOT 벚꽃라떼</figcaption>
+                </figure>
+                <button class="resetBtn openMenuDetail" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
+                <article class="menuDetail" role="dialog">
+                    <h3 class="a11yHidden" id="HOTCherryBlossomLatteDetail">메뉴 상세정보</h3>
+                    <dl aria-labelledby="HOTCherryBlossomLatteDetail">
+                        <dt class="resetMargin">ICED 벚꽃라떼
+                            <span lang="en">Cherry Blossom Latte</span>
+                        </dt>
+                        <dd class="resetMargin">
+                            은은한 벚꽃향과 라즈베리 화이트 초콜릿 토핑이 올라간 핑크빛 라떼
+                        </dd>
+                    </dl>
+                    <div class="dividTable">
+                        <table class="elementTable" aria-labelledby="HOTCherryBlossomLatteDetail">
+                            <tr>
+                                <th scope="row">칼로리</th>
+                                <td>(430kcal)</td>
+                                <th scope="row">포화지방</th>
+                                <td>(19.0g)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">당류</th>
+                                <td>(38g)</td>
+                                <th scope="row">나트륨</th>
+                                <td>(190mg)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">단백질</th>
+                                <td>(10g)</td>
+                                <th scope="row">카페인</th>
+                                <td>(0mg)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="resetBtn menuDetailCloseBtn" type="button" aria-label="상세정보닫기">
+                        <span class="cross1"></span>
+                        <span class="cross2"></span>
+                    </button>
+                </article>
+            </li>
+        </ul>
+    </main>
+    <footer class="a11yHidden">
+        <h2></h2>
+        <p></p>
+    </footer>
+</body>
+
+</html>
