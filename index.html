@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,16 +23,16 @@
                 <img src="./style/images/Logo.svg" alt="이디야 커피">
             </a>
         </h1>
-        <button class="resetBtn naviOpenBtn" type="button" aria-label="메인 네비게이션 열기" aria-pressed="false">
+        <button class="resetBtn naviOpenBtn" type="button" aria-haspopup="dialog" aria-label="메인 네비게이션 열기" aria-pressed="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <nav class="appNav">
+        <nav class="appNav" role="dialog" aria-labelledby="mainNav">
             <h2 class="a11yHidden" id="mainNav">이디야 홈 페이지 메인 네비게이션</h2>
             <ul>
                 <li class="appNaviMenu">
-                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false">이디야 음료들</button>
+                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false" aria-haspopup="menu" aria-label="세부 메뉴 열기">이디야 음료들</button>
                     <ul class="navSubmenu">
                         <li><a class="subMenu" href="">1</a></li>
                         <li><a class="subMenu" href="">2</a></li>
@@ -41,7 +40,7 @@
                     </ul>
                 </li>
                 <li class="appNaviMenu">
-                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false">이디야 멤버스</button>
+                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false" aria-haspopup="menu" aria-label="세부 메뉴 열기">이디야 멤버스</button>
                     <ul class="navSubmenu">
                         <li><a class="subMenu" href="#">1</a></li>
                         <li><a class="subMenu" href="#">2</a></li>
@@ -49,7 +48,7 @@
                     </ul>
                 </li>
                 <li class="appNaviMenu">
-                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false">이디야 커피랩</button>
+                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false" aria-haspopup="menu" aria-label="세부 메뉴 열기">이디야 커피랩</button>
                     <ul class="navSubmenu">
                         <li><a class="subMenu" href="#">1</a></li>
                         <li><a class="subMenu" href="#">2</a></li>
@@ -57,7 +56,7 @@
                     </ul>
                 </li>
                 <li class="appNaviMenu">
-                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false">이디야 컬쳐랩</button>
+                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false" aria-haspopup="menu" aria-label="세부 메뉴 열기">이디야 컬쳐랩</button>
                     <ul class="navSubmenu">
                         <li><a class="subMenu" href="#">1</a></li>
                         <li><a class="subMenu" href="#">2</a></li>
@@ -65,7 +64,7 @@
                     </ul>
                 </li>
                 <li class="appNaviMenu">
-                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false">이디야 공지사항</button>
+                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false" aria-haspopup="menu" aria-label="세부 메뉴 열기">이디야 공지사항</button>
                     <ul class="navSubmenu">
                         <li><a class="subMenu" href="#">1</a></li>
                         <li><a class="subMenu" href="#">2</a></li>
@@ -73,7 +72,7 @@
                     </ul>
                 </li>
                 <li class="appNaviMenu">
-                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false">이디야 매장찾기</button>
+                    <button class="resetBtn openSubmenu" type="button" aria-pressed="false" aria-haspopup="menu" aria-label="세부 메뉴 열기">이디야 매장찾기</button>
                     <ul class="navSubmenu">
                         <li><a class="subMenu" href="#">1</a></li>
                         <li><a class="subMenu" href="#">2</a></li>
@@ -95,8 +94,8 @@
                     <img src="./style/images/iced벚꽃라떼.svg">
                     <figcaption id="iceCBL">ICED 벚꽃라떼</figcaption>
                 </figure>
-                <button class="resetBtn openMenuDetail" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
-                <article class="menuDetail" role="dialog" aria-modal="false">
+                <button class="resetBtn openMenuDetail" aria-haspopup="dialog"  type="button" aria-pressed="false">메뉴 상세정보 열기</button>
+                <article class="menuDetail" role="dialog" aria-modal="true" aria-labelledby="ICECherryBlossomLatteDetail">
                     <h3 class="a11yHidden" id="ICECherryBlossomLatteDetail">ICED 벚꽃라떼</h3>
                     <dl>
                         <dt class="resetMargin">ICED 벚꽃라떼
@@ -140,8 +139,8 @@
                     <img src="./style/images/hot벚꽃라떼.svg">
                     <figcaption id="HOTCBL">HOT 벚꽃라떼</figcaption>
                 </figure>
-                <button class="resetBtn openMenuDetail" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
-                <article class="menuDetail" role="dialog" aria-modal="false">
+                <button class="resetBtn openMenuDetail"  aria-haspopup="dialog" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
+                <article class="menuDetail" role="dialog" aria-modal="true" aria-labelledby="HOTCherryBlossomLatteDetail">
                     <h3 class="a11yHidden" id="HOTCherryBlossomLatteDetail">HOT 벚꽃라떼 상세정보</h3>
                     <dl aria-labelledby="HOTCherryBlossomLatteDetail">
                         <dt class="resetMargin">ICED 벚꽃라떼
@@ -185,8 +184,8 @@
                     <img src="./style/images/iced브라우니쇼콜라.svg" class="brownie">
                     <figcaption id="IceBC">ICED 브라우니 쇼콜라</figcaption>
                 </figure>
-                <button class="resetBtn openMenuDetail" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
-                <article class="menuDetail" role="dialog" aria-modal="false">
+                <button class="resetBtn openMenuDetail"  aria-haspopup="dialog" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
+                <article class="menuDetail" role="dialog" aria-modal="true" aria-labelledby="IceBrownieChocolateDetail">
                     <h3 class="a11yHidden" id="IceBrownieChocolateDetail">ICED 브라우니 쇼콜라 상세정보</h3>
                     <dl>
                         <dt class="resetMargin">ICED 브라우니 쇼콜라
@@ -230,8 +229,8 @@
                     <img src="./style/images/hot브라우니쇼콜라.svg" class="brownie">
                     <figcaption id="HOTBC">HOT 브라우니 쇼콜라</figcaption>
                 </figure>
-                <button class="resetBtn openMenuDetail" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
-                <article class="menuDetail" role="dialog" aria-modal="false">
+                <button class="resetBtn openMenuDetail"  aria-haspopup="dialog" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
+                <article class="menuDetail" role="dialog" aria-modal="true" aria-labelledby="HOTBrownieChocolateDetail">
                     <h3 class="a11yHidden" id="HOTBrownieChocolateDetail">HOT 브라우니 쇼콜라 상세정보</h3>
                     <dl aria-labelledby="HOTBrownieChocolateDetail">
                         <dt class="resetMargin">HOT 브라우니 쇼콜라
@@ -275,8 +274,8 @@
                     <img src="./style/images/제주청귤오리지널.svg">
                     <figcaption id="JGTO">제주청귤 오리지널</figcaption>
                 </figure>
-                <button class="resetBtn openMenuDetail" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
-                <article class="menuDetail" role="dialog" aria-modal="false">
+                <button class="resetBtn openMenuDetail"  aria-haspopup="dialog" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
+                <article class="menuDetail" role="dialog" aria-modal="true" aria-labelledby="JejuGreenTangerineTeaDetail">
                     <h3 class="a11yHidden" id="JejuGreenTangerineTeaDetail">제주 청귤 오리지널 상세정보</h3>
                     <dl>
                         <dt class="resetMargin">제주청귤 오리지널
@@ -320,8 +319,8 @@
                     <img src="./style/images/제주청귤블라썸.svg">
                     <figcaption id="JGTB">제주청귤 블라썸</figcaption>
                 </figure>
-                <button class="resetBtn openMenuDetail" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
-                <article class="menuDetail" role="dialog" aria-modal="false">
+                <button class="resetBtn openMenuDetail" aria-haspopup="dialog"  type="button" aria-pressed="false">메뉴 상세정보 열기</button>
+                <article class="menuDetail" role="dialog" aria-modal="true" aria-labelledby="JejuGreenTangerineBlossomDetail">
                     <h3 class="a11yHidden" id="JejuGreenTangerineBlossomDetail">제주청귤 블라썸 상세정보</h3>
                     <dl aria-labelledby="JejuGreenTangerineBlossomDetail">
                         <dt class="resetMargin">제주청귤 블라썸
@@ -365,8 +364,8 @@
                     <img src="./style/images/석류오리지널.svg">
                     <figcaption id="PTO">석류 오리지널</figcaption>
                 </figure>
-                <button class="resetBtn openMenuDetail" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
-                <article class="menuDetail" role="dialog" aria-modal="false">
+                <button class="resetBtn openMenuDetail"  aria-haspopup="dialog" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
+                <article class="menuDetail" role="dialog" aria-modal="true" aria-labelledby="PomegranateTeaDetail">
                     <h3 class="a11yHidden" id="PomegranateTeaDetail">석류 오리지널 상세정보</h3>
                     <dl>
                         <dt class="resetMargin">석류 오리지널
@@ -411,7 +410,7 @@
                     <figcaption id="PAL">석류 애플라임</figcaption>
                 </figure>
                 <button class="resetBtn openMenuDetail" type="button" aria-pressed="false">메뉴 상세정보 열기</button>
-                <article class="menuDetail" role="dialog" aria-modal="false">
+                <article class="menuDetail" role="dialog" aria-haspopup="dialog"  aria-modal="true" aria-labelledby="PomegranateAppleLimeDetail">
                     <h3 class="a11yHidden" id="PomegranateAppleLimeDetail">석류 애플라임 상세정보</h3>
                     <dl aria-labelledby="PomegranateAppleLimeDetail">
                         <dt class="resetMargin">석류 애플라임

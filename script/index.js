@@ -7,6 +7,32 @@ const clickNavi = document.querySelectorAll(".openSubmenu");
 const menuItem = document.querySelectorAll(".menuItem");
 const subMenu = document.querySelectorAll(".subMenu");
 
+// 최초 접근시 단축키 알려주고 확인 하면 세션스토리지에 저장해서 안알려주기
+window.addEventListener("load",function(e){
+    if(sessionStorage.getItem("confirm")){
+        return
+    }else if(!sessionStorage.getItem("confirm")){
+        if(confirm("본 페이지는 저시력자를 위해 단축키를 제공합니다. control, shift, Q를 동시에 누르면 메인 네비게이션으로 이동합니다. 확인 혹은 enter를 누를시 다시 알려드리지 않습니다.")){
+            this.window.sessionStorage.setItem("confirm","true");
+        }
+        return;
+    }
+})
+
+// 어디에서든 컨트롤 쉬프트 q 로 네비 버튼
+document.addEventListener("keydown",function(e){
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 81 ){
+        // 메뉴 열려있음 닫고 네비 오픈버튼으로
+        if(navi.classList.contains("naviShow")){
+            navi.classList.remove("naviShow");
+            naviOpenBtn.setAttribute("aria-pressed", "false");
+            naviCloseBtn.setAttribute("aria-pressed", "true");
+            naviOpenBtn.focus();
+        }
+        naviOpenBtn.focus();
+    }
+})
+
 // 네비 클릭 열기
 naviOpenBtn.addEventListener("click", function (e) {
     navi.classList.add("naviShow");
@@ -14,12 +40,14 @@ naviOpenBtn.addEventListener("click", function (e) {
     naviCloseBtn.setAttribute("aria-pressed", "false")
     clickNavi[0].focus()
 });
+
 // 네비 클릭 닫기
 naviCloseBtn.addEventListener("click", function (e) {
     navi.classList.remove("naviShow");
     naviOpenBtn.setAttribute("aria-pressed", "false");
-    naviCloseBtn.setAttribute("aria-pressed", "true")
+    naviCloseBtn.setAttribute("aria-pressed", "true");
 })
+
 //  네비 키보드 열기
 naviOpenBtn.addEventListener("keydown",function(e){
     // 엔터는 네비열기
@@ -36,7 +64,7 @@ naviOpenBtn.addEventListener("keydown",function(e){
 // 네비 키보드 닫기
 naviCloseBtn.addEventListener("keydown",function(e){
     // 엔터는 네비 닫고 첫 메뉴 포커스
-    if(e.keyCode == 13){
+    if(e.keyCode == 13 || ( e.shiftKey && e.keyCode == 9)){
         navi.classList.remove("naviShow");
         naviOpenBtn.setAttribute("aria-pressed", "false");
         naviCloseBtn.setAttribute("aria-pressed", "true")
@@ -46,6 +74,14 @@ naviCloseBtn.addEventListener("keydown",function(e){
         clickNavi[0].focus()
     }
 });
+// 쉬프트 탭으로 첫 메뉴에서 네비 버튼으로 돌아가기
+menuItem[0].addEventListener("keydown",function(e){
+    if(e.shiftKey && e.keyCode == 9){
+        e.preventDefault()
+        naviOpenBtn.focus();
+    }
+})
+
 
 // 서브 네비게이션 클릭 이벤트
 let checkClick = "false";

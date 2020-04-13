@@ -199,6 +199,28 @@ th{
     position: relative;
     margin-top:30px;
 }
+.menuItem:nth-child(1){
+    animation: menuSlide 1s both 1s;
+}
+.menuItem:nth-child(2){
+    animation: menuSlide 1s both 1.2s;
+}
+.menuItem:nth-child(3){
+    animation: menuSlide 1s both 1.4s;
+}
+.menuItem:nth-child(n+4){
+    animation: menuSlide 1s both 1.6s;
+}
+@keyframes menuSlide{
+    0%{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100%{
+        transform: none;
+        opacity: 1;
+    }
+}
 .menuItem figure{
     height: 100%;
     text-align: center;
@@ -255,6 +277,7 @@ img[src*="브라우니"]{
 }
 .menuDetail dl dd{
     padding-top:20px;
+    text-align: justify;
 }
 .dividTable{
     box-sizing: border-box;
@@ -315,9 +338,15 @@ img[src*="브라우니"]{
     .menuItem figure figcaption{
         margin: 10px 0;
     }
+    .menuDetail dl dd{
+        font-size: 0.9em;
+        line-height: 1.5;
+        font-weight: 500;
+    }
 }
 @media(max-width:415px){
     .elementTable tr th, .elementTable tr td{
-        font-size: 0.7em;
+        font-size: 0.8em;
+        padding: 3px 0;
     }
 }
