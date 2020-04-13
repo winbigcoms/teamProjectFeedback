@@ -38,6 +38,7 @@ th{
     width:100%;
     height: 80px;
     border-bottom: 1px solid silver;
+    background-color: rgba(255,255,255,0.5);
     animation: openHeader 1.2s;
     z-index: 2;
 }
@@ -144,6 +145,9 @@ th{
     display:none;
     padding: 10px 0 10px 30px;
 }
+.navSubOpen{
+    display:block;
+}
 .navSubmenu li a{
     padding: 10px 0 10px 10px;
     display:block;
@@ -198,6 +202,7 @@ th{
     margin-top:30px;
 }
 .menuItem figure{
+    height: 100%;
     text-align: center;
     box-sizing: border-box;
     padding-top: 10px;
@@ -248,7 +253,7 @@ img[src*="브라우니"]{
 }
 .menuDetail dl dt span{
     display:block;
-    color:#999;
+    color:#767676;
 }
 .menuDetail dl dd{
     padding-top:20px;
