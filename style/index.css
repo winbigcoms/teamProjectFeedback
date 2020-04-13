@@ -1,4 +1,4 @@
- @charset "utf-8";
+@charset "utf-8";
  /*  css 컴포넌트 */
 
 a{
@@ -117,8 +117,6 @@ th{
     transform: translateX(105%);
     background-color: rgba(20, 24, 44, 0.9);
     transition: all 0.5s;
-    /* 뒷 배경 블러처리해서 시각적 구분 버튼겹쳐보이는 이슈도 */
-    backdrop-filter: blur(4px);
 
 }
 /* 네비 js 컨트롤 용 클래스 */

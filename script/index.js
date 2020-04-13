@@ -7,18 +7,45 @@ const clickNavi = document.querySelectorAll(".openSubmenu");
 const menuItem = document.querySelectorAll(".menuItem");
 const subMenu = document.querySelectorAll(".subMenu");
 
-// 네비 열기
+// 네비 클릭 열기
 naviOpenBtn.addEventListener("click", function (e) {
     navi.classList.add("naviShow");
     naviOpenBtn.setAttribute("aria-pressed", "true");
     naviCloseBtn.setAttribute("aria-pressed", "false")
+    clickNavi[0].focus()
 });
-
+// 네비 클릭 닫기
 naviCloseBtn.addEventListener("click", function (e) {
     navi.classList.remove("naviShow");
     naviOpenBtn.setAttribute("aria-pressed", "false");
     naviCloseBtn.setAttribute("aria-pressed", "true")
 })
+//  네비 키보드 열기
+naviOpenBtn.addEventListener("keydown",function(e){
+    // 엔터는 네비열기
+    if(e.keyCode == 13){
+        navi.classList.add("naviShow");
+        naviOpenBtn.setAttribute("aria-pressed", "true");
+        naviCloseBtn.setAttribute("aria-pressed", "false")
+        // 탭 누르면 메뉴로
+    }else if(e.keyCode == 9){
+        e.preventDefault()
+        menuItem[0].firstChild.nextSibling.focus()
+    }
+});
+// 네비 키보드 닫기
+naviCloseBtn.addEventListener("keydown",function(e){
+    // 엔터는 네비 닫고 첫 메뉴 포커스
+    if(e.keyCode == 13){
+        navi.classList.remove("naviShow");
+        naviOpenBtn.setAttribute("aria-pressed", "false");
+        naviCloseBtn.setAttribute("aria-pressed", "true")
+        menuItem[0].firstChild.nextSibling.focus()
+        // 탭은 첫 네비 메뉴로 
+    }else if(e.keyCode == 9){
+        clickNavi[0].focus()
+    }
+});
 
 // 서브 네비게이션 클릭 이벤트
 let checkClick = "false";
@@ -43,10 +70,12 @@ for (y = 0; y < clickNavi.length; y++) {
             if (e.keyCode == 40) {
                 e.currentTarget.nextElementSibling.firstChild.nextSibling.firstChild.focus()
             }
+            // 위 화살표 위로 움직이기
             if (e.keyCode == 38) {
                 let checkExistPreE = e.currentTarget.parentNode.previousElementSibling !== null;
                 if (checkExistPreE) {
                     e.currentTarget.parentNode.previousElementSibling.querySelector(".openSubmenu").focus()
+                // 더 위로 갈게 없으면 닫기 버튼 포커스
                 } else if (!checkExistPreE) {
                     naviCloseBtn.focus();
                 }
@@ -58,6 +87,7 @@ for (y = 0; y < clickNavi.length; y++) {
                 let checkExistNext = e.currentTarget.parentNode.nextElementSibling !== null;
                 if (checkExistNext) {
                     e.currentTarget.parentNode.nextElementSibling.querySelector(".openSubmenu").focus()
+                // 더 내려갈게 없으면 닫기버튼 포커스
                 } else if (!checkExistNext) {
                     naviCloseBtn.focus();
                 }
@@ -111,15 +141,18 @@ for (z = 0; z < subMenu.length; z++) {
         const checkPrevParent = e.currentTarget.parentNode.previousElementSibling !== null;
         // 아래키
         if (e.keyCode == 40) {
-            console.log("!")
             if (checkNextParent) {
                 e.currentTarget.parentNode.nextElementSibling.querySelector(".subMenu").focus();
             } else if (!checkNextParent) {
-                e.currentTarget.parentNode.parentNode.parentNode.nextElementSibling.querySelector(".openSubmenu").focus();
+                const checkparentNext= e.currentTarget.parentNode.parentNode.parentNode.nextElementSibling !== null;
+                if( checkparentNext ){
+                    e.currentTarget.parentNode.parentNode.parentNode.nextElementSibling.querySelector(".openSubmenu").focus();
+                }else if(!checkparentNext){
+                    naviCloseBtn.focus();
+                }
             }
         }
         if (e.keyCode == 38) {
-            console.log("?")
             if (checkPrevParent) {
                 e.currentTarget.parentNode.previousElementSibling.querySelector(".subMenu").focus();
             } else if (!checkPrevParent) {

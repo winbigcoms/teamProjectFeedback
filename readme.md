@@ -34,27 +34,27 @@
      1. 목차정리
 
          	1. 디자인 구역은 di
-         	2. 기능별 태그
-         	3. 클릭가능 = 버튼 or  a
+               	2. 기능별 태그
+                  	3. 클릭가능 = 버튼 or  a
 
-        
+   ​     
 
-        
+   ​     
 
         dl > json식으로 주요 콘텐츠만
-
+        
         1. alt와 라벨 중복 x
         2. 속성의 중복 사용 ex) caption - label
-
+        
         ​		태그 라벨링 
-
+        
         1. a - label
         2. active요소 > dialog, button 등 role 주기
         3. 디자인적 요소에는 라벨링 x
         4. title과 레이블의 관계
-
+        
         메타태그 
-
+        
         1. title, keyword, canonical, description, property
         2. pavicon,icon
 
@@ -73,3 +73,29 @@
 문제점 1. 버튼으로 랩을 씌울시 hover 이벤트 사용 불가
 문제점 2. table태그를 단일로 사용시 borderCollapse 속성 사용 이후 padding 사용 불가
 문제점 3. 브라우니 쇼콜라 이미지의 경우 내부 사이즈가 다름, 이것의 hover이벤트를 css로 컨트롤 불가 js에서 제어
+
+
+
+SEO를 위한 메타 태그 작성 시 
+
+https://invisiblegold.com/blog/metatagsvskeywords/
+
+구글의 경우 meta keyward가 검색점수에 포함되지 않는다.
+
+<hr>
+
+접근성
+
+​	중복된 정보를 제거하면 html vaildator가 에러 처리 할 수 있다.
+
+![KakaoTalk_20200412_175001472_02](https://user-images.githubusercontent.com/54830773/79099792-e85e7d00-7d9f-11ea-8979-5ab74bc3e241.jpg)
+![KakaoTalk_20200412_175001472_03](https://user-images.githubusercontent.com/54830773/79099800-eac0d700-7d9f-11ea-954d-d37e1f854ef1.jpg)
+![KakaoTalk_20200412_175001472_01](https://user-images.githubusercontent.com/54830773/79099806-ed233100-7d9f-11ea-8e14-b3f47c6b73e9.jpg)
+
+메타태그 사용 이후 크롤링 결과
+
+![클ㄹ](https://user-images.githubusercontent.com/54830773/79101092-d03c2d00-7da2-11ea-80c4-3b19387f2779.png)
+
+
+
+h태그 가 display: none이어도 잘 크롤링이 되는 것이 확인 되었다.
