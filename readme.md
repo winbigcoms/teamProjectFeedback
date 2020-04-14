@@ -99,3 +99,15 @@ https://invisiblegold.com/blog/metatagsvskeywords/
 
 
 h태그 가 display: none이어도 잘 크롤링이 되는 것이 확인 되었다.
+
+
+
+https://invisiblegold.com/blog/metatagsvskeywords/
+
+seo에서 meta keyword와 description의 차이
+
+​	-과거 meta keyword의 과용, 악용으로 더 이상 메이저 검색엔진은 keyword를 지원하지않음.
+
+> 잘 보면 네이버도 keyword 안쓴다.
+
+![keyword](https://user-images.githubusercontent.com/54830773/79181463-6164df80-7e47-11ea-84a6-19f6524b5847.png)
