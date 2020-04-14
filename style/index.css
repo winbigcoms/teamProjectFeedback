@@ -285,26 +285,26 @@ img[src*="브라우니"]{
     transition: all 0.5s;
     background-color: rgba(255,255,255,0.7);
 }
-.menuDetail dl{
-    padding: 20px 20px;
-}
-.menuDetail dl dt{
-    box-sizing: border-box;
-    padding: 10px 0 20px 0;
+
+.menuDetail h3{
+    margin: 20px;
+    padding-bottom: 20px;
     border-bottom: 2px solid #000;
+    font-weight: 400;
 }
-.menuDetail dl dt span{
+.menuDetail p{
+    box-sizing: border-box;
+    margin: 10px 20px 20px 20px;
+}
+.menuDetail h3 span{
     display:block;
     color:#767676;
+    font-size: 0.9em;
 }
-.menuDetail dl dd{
-    padding-top:20px;
-    text-align: justify;
-}
+
 .dividTable{
     box-sizing: border-box;
     width:100%;
-    height: 70px;
     position: absolute;
     padding: 10px 20px;
     bottom:0;
@@ -314,14 +314,15 @@ img[src*="브라우니"]{
 .elementTable{
     margin: 0 auto;
     width: 80%;
-    height: 100%;
     border-collapse: collapse;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 .elementTable tr th:nth-child(n+2){
     border-left: 1px solid #000;
     padding-left: 4%;
 }
+
+
 .menuDetailCloseBtn{
     position: absolute;
     top:0;
@@ -341,14 +342,19 @@ img[src*="브라우니"]{
     width: 30px;
     height: 2px;
 }
-@media(min-width:561px),(max-width:678px){
+@media(max-width:835px){
+    .elementTable{
+       font-size: 0.8em;
+    }
+}
+@media (min-width:561px) and (max-width:744px){
     .elementTable{
         width:100%;
     }
     .dividTable{
         padding: 10px 5px 10px 10px;
     }
-    .menuDetail dl dt{
+    .menuDetail h3{
         box-sizing: border-box;
         font-size: 0.9em;
         padding-bottom: 10px;
@@ -357,7 +363,7 @@ img[src*="브라우니"]{
     .menuItem figure figcaption{
         margin: 10px 0;
     }
-    .menuDetail dl dd{
+    .menuDetail p{
         font-size: 0.8em;
         line-height: 1.3;
         font-weight: 500;
@@ -408,7 +414,7 @@ img[src*="브라우니"]{
     .menuItem figure figcaption{
         margin: 10px 0;
     }
-    .menuDetail dl dd{
+    .menuDetail p{
         font-size: 0.8em;
         line-height: 1.3;
         font-weight: 500;

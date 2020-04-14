@@ -111,3 +111,7 @@ seo에서 meta keyword와 description의 차이
 > 잘 보면 네이버도 keyword 안쓴다.
 
 ![keyword](https://user-images.githubusercontent.com/54830773/79181463-6164df80-7e47-11ea-84a6-19f6524b5847.png)
+
+
+
+http://blog.drakejin.me/Google-Search-Engine-1/
