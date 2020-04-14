@@ -33,27 +33,25 @@ th{
 /* 알림 */
 .notice{
     position: fixed;
-    top:0;
-    left: calc(50% - 300px);
-    width: 600px;
-    height: 100px;
+    top:20px;
+    left: 20%;
+    width: 60%;
     padding: 20px;
     z-index: 5;
+    visibility: hidden;
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 10px;
-}
-.notice{
-    visibility: hidden;
 }
 .notice a{
     display:block;
     text-align: justify;
     font-size: 0.9em;
+    line-height: 1.3;
 }
 .notice div{
+    margin-top: 1em;
     text-align: right;
-    margin-top: 20px;
 }
 /* 헤더 */
 .appHeader{
@@ -142,7 +140,6 @@ th{
     transform: translateX(105%);
     background-color: rgba(20, 24, 44, 0.9);
     transition: all 0.5s;
-
 }
 /* 네비 js 컨트롤 용 클래스 */
 .naviShow{
@@ -344,7 +341,55 @@ img[src*="브라우니"]{
     width: 30px;
     height: 2px;
 }
-@media(max-width:660px){
+@media(min-width:561px),(max-width:678px){
+    .elementTable{
+        width:100%;
+    }
+    .dividTable{
+        padding: 10px 5px 10px 10px;
+    }
+    .menuDetail dl dt{
+        box-sizing: border-box;
+        font-size: 0.9em;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #000;
+    }
+    .menuItem figure figcaption{
+        margin: 10px 0;
+    }
+    .menuDetail dl dd{
+        font-size: 0.8em;
+        line-height: 1.3;
+        font-weight: 500;
+        padding: 10px 0;
+        
+    }
+}
+@media(max-width:560px){
+    .notice{
+        min-width: 210px;
+        top:20px;
+        left: 10%;
+        width: 80%;
+        box-sizing: border-box;
+    }
+    .notice a{
+        display:block;
+        text-align: justify;
+        font-size: 0.8em;
+        margin-bottom: 8px;
+        /* padding: 5px 0;
+        box-sizing: border-box; */
+    }
+    .notice div{
+        position: absolute;
+        bottom:5px;
+        right: 20px;
+        margin-top: 5px;
+    }
+    .notice div button{
+        font-size: 0.8em;
+    }
     .appHeaderHeading a img{
         height: 30%;
         width:auto;
@@ -364,8 +409,8 @@ img[src*="브라우니"]{
         margin: 10px 0;
     }
     .menuDetail dl dd{
-        font-size: 0.9em;
-        line-height: 1.5;
+        font-size: 0.8em;
+        line-height: 1.3;
         font-weight: 500;
     }
 }
