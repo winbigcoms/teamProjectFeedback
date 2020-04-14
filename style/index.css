@@ -30,6 +30,31 @@ th{
     overflow: hidden;
     clip: rect(0,0,0,0);
 }
+/* 알림 */
+.notice{
+    position: fixed;
+    top:0;
+    left: calc(50% - 300px);
+    width: 600px;
+    height: 100px;
+    padding: 20px;
+    z-index: 5;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+.notice{
+    visibility: hidden;
+}
+.notice a{
+    display:block;
+    text-align: justify;
+    font-size: 0.9em;
+}
+.notice div{
+    text-align: right;
+    margin-top: 20px;
+}
 /* 헤더 */
 .appHeader{
     position:fixed;

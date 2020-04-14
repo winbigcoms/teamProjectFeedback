@@ -6,16 +6,78 @@ const menuDetailCloseBtn = document.querySelectorAll(".menuDetailCloseBtn");
 const clickNavi = document.querySelectorAll(".openSubmenu");
 const menuItem = document.querySelectorAll(".menuItem");
 const subMenu = document.querySelectorAll(".subMenu");
-
+const notice = document.querySelector(".notice a");
+const logoA = document.querySelector(".appHeaderHeading a");
+const confirmY = document.querySelector(".confirmNoticY");
+const confirmN = document.querySelector(".confirmNoticN");
 // 최초 접근시 단축키 알려주고 확인 하면 세션스토리지에 저장해서 안알려주기
 window.addEventListener("load",function(e){
     if(sessionStorage.getItem("confirm")){
-        return
+        notice.parentNode.style.display = "none";
+        logoA.focus();
     }else if(!sessionStorage.getItem("confirm")){
-        if(confirm("본 페이지는 저시력자를 위해 단축키를 제공합니다. control, shift, Q를 동시에 누르면 메인 네비게이션으로 이동합니다. 확인 혹은 enter를 누를시 다시 알려드리지 않습니다.")){
-            this.window.sessionStorage.setItem("confirm","true");
-        }
-        return;
+        notice.parentNode.style.display = "block";
+        notice.parentNode.style.visibility = "visible";
+        notice.focus();
+    }
+})
+
+// 안내문 포커스 동안 엔터 누르면 재알림 안하기
+notice.addEventListener("keydown",function(e){
+    if(e.keyCode == 13){
+        e.preventDefault();
+        notice.parentNode.style.display="none";
+        logoA.focus();
+        window.sessionStorage.setItem("confirm","yes");
+// esc누르면 저장안하고 나가기
+    }else if(e.keyCode == 27){
+        e.preventDefault();
+        notice.parentNode.style.display="none";
+        logoA.focus();
+    }else if( e.shiftKey && e.keyCode == 9){
+        e.preventDefault();
+        notice.focus();
+        // 엔터하면 저장하고 밖으로
+    }
+})
+// 안내문 버튼 이벤트
+confirmY.addEventListener("keydown",function(e){
+    // 확인에서 쉬프트 탭하면 본문으로
+    if( e.shiftKey && e.keyCode == 9){
+        e.preventDefault();
+        notice.focus();
+        // 엔터하면 저장하고 밖으로
+    }else if( e.keyCode == 13){
+        notice.parentNode.style.display="none";
+        logoA.focus();
+        window.sessionStorage.setItem("confirm","yes");
+        // esc하면 저장안하고 밖으로
+    }else if(e.keyCode == 27){
+        e.preventDefault();
+        notice.parentNode.style.display="none";
+        logoA.focus();
+    };
+})
+// 취소에서
+confirmN.addEventListener("keydown",function(e){
+    // 쉬프트 탭하면 확인 버튼으로
+    if( e.shiftKey && e.keyCode == 9){
+        e.preventDefault();
+        confirmY.focus();
+        // 엔터하면 저장안하고 밖으로
+    }else if( e.keyCode == 13){
+        e.preventDefault();
+        notice.parentNode.style.display="none";
+        logoA.focus();
+        // esc해도 저장 안하고 밖으로
+    }else if(e.keyCode == 27){
+        e.preventDefault();
+        notice.parentNode.style.display="none";
+        logoA.focus();
+        // 탭하면 본문으로
+    }else if( e.keyCode == 9){
+        e.preventDefault();
+        notice.focus();
     }
 })
 
