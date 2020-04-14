@@ -57,6 +57,11 @@ confirmY.addEventListener("keydown",function(e){
         notice.parentNode.style.display="none";
         logoA.focus();
     };
+});
+confirmY.addEventListener("click",function(e){
+    notice.parentNode.style.display="none";
+    logoA.focus();
+    window.sessionStorage.setItem("confirm","yes");
 })
 // 취소에서
 confirmN.addEventListener("keydown",function(e){
@@ -79,6 +84,12 @@ confirmN.addEventListener("keydown",function(e){
         e.preventDefault();
         notice.focus();
     }
+});
+
+confirmN.addEventListener("click",function(e){
+    e.preventDefault();
+    notice.parentNode.style.display="none";
+    logoA.focus();
 })
 
 // 어디에서든 컨트롤 쉬프트 q 로 네비 버튼
